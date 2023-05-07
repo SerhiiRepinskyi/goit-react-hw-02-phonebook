@@ -15,11 +15,8 @@ const ContactList = ({ contacts, deleteContact }) => {
     <ul className={css.list}>
       {sortedContacts.map(({ id, name, number }) => (
         <li className={css.item} key={id}>
-          <p className={css.contact}>
-            <span>{name}: </span>
-            <span>{number}</span>
-          </p>
-
+          <span>{name}: </span>
+          <span>{number}</span>
           <button
             className={css.btn}
             type="submit"

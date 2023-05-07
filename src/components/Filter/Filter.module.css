@@ -1,5 +1,18 @@
 /* .filter {} */
 
-/* .labelFilter {} */
+.labelFilter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 
-/* .filterInput {} */
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.filterInput {
+  width: 250px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  padding: 4px;
+}
