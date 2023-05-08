@@ -1,4 +1,6 @@
-.form {
+import styled from 'styled-components';
+
+export const Form = styled.form`
   display: flex;
   gap: 25px;
   flex-direction: column;
@@ -7,16 +9,15 @@
   border: 1px solid #62ada0;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+`;
 
-.inputName,
-.inputNumber {
+export const FormInput = styled.input`
   width: 300px;
   font-size: 14px;
   padding: 4px;
-}
+`;
 
-.labelForm {
+export const FormLabel = styled.label`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,9 +25,9 @@
 
   font-size: 16px;
   font-weight: 500;
-}
+`;
 
-.btn {
+export const FormBtn = styled.button`
   cursor: pointer;
 
   display: block;
@@ -50,10 +51,11 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.btn:hover {
-  color: #010101;
-  background-color: #c8e9e3;
-  box-shadow: rgb(255, 255, 255) -2px -2px 5px, rgba(0, 0, 0, 0.24) 2px 2px 5px;
-}
+  .btn:hover {
+    color: #010101;
+    background-color: #c8e9e3;
+    box-shadow: rgb(255, 255, 255) -2px -2px 5px,
+      rgba(0, 0, 0, 0.24) 2px 2px 5px;
+  }
+`;

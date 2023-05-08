@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import css from './ContactList.module.css';
+import { ContactsList, ContactItem, Btn } from './ContactList.styled';
 
 const ContactList = ({ contacts, deleteContact }) => {
   const sortedContacts = [...contacts].sort((a, b) =>
@@ -12,21 +12,17 @@ const ContactList = ({ contacts, deleteContact }) => {
   //   });
 
   return (
-    <ul className={css.list}>
+    <ContactsList>
       {sortedContacts.map(({ id, name, number }) => (
-        <li className={css.item} key={id}>
+        <ContactItem key={id}>
           <span>{name}: </span>
           <span>{number}</span>
-          <button
-            className={css.btn}
-            type="submit"
-            onClick={() => deleteContact(id)}
-          >
+          <Btn type="submit" onClick={() => deleteContact(id)}>
             Delete
-          </button>
-        </li>
+          </Btn>
+        </ContactItem>
       ))}
-    </ul>
+    </ContactsList>
   );
 };
 

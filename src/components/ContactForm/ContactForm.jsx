@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import css from './ContactForm.module.css';
+import { Form, FormLabel, FormInput, FormBtn } from './ContactForm.styled';
 
 const INITIAL_STATE = {
   name: '',
@@ -36,11 +36,10 @@ class ContactForm extends Component {
     const { name, number } = this.state;
 
     return (
-      <form className={css.form} onSubmit={this.handleSubmit}>
-        <label className={css.labelForm}>
+      <Form onSubmit={this.handleSubmit}>
+        <FormLabel>
           Name
-          <input
-            className={css.inputName}
+          <FormInput
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -49,12 +48,11 @@ class ContactForm extends Component {
             value={name}
             onChange={this.handleInputChange}
           />
-        </label>
+        </FormLabel>
 
-        <label className={css.labelForm}>
+        <FormLabel>
           Number
-          <input
-            className={css.inputNumber}
+          <FormInput
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -63,12 +61,10 @@ class ContactForm extends Component {
             value={number}
             onChange={this.handleInputChange}
           />
-        </label>
+        </FormLabel>
 
-        <button className={css.btn} type="submit">
-          Add contact
-        </button>
-      </form>
+        <FormBtn type="submit">Add contact</FormBtn>
+      </Form>
     );
   }
 }
