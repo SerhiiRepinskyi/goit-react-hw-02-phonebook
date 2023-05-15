@@ -21,3 +21,15 @@ export const AmountContacts = styled.div`
   font-size: 18px;
   font-weight: 500;
 `;
+
+export const ContactsNum = styled.span`
+  padding: 2px 8px;
+  background-color: #f4efef;
+`;
+
+export const Message = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  padding: 40px 60px;
+  background-color: #f4efef;
+`;

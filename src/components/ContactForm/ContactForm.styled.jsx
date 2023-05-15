@@ -52,7 +52,7 @@ export const FormBtn = styled.button`
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .btn:hover {
+  &:hover {
     color: #010101;
     background-color: #c8e9e3;
     box-shadow: rgb(255, 255, 255) -2px -2px 5px,
