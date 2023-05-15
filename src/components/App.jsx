@@ -72,7 +72,7 @@ class App extends Component {
 
         <Subtitle>Contacts</Subtitle>
         <AmountContacts>
-          All contacts in the phonebook:
+          All contacts in the phonebook: 
           <ContactsNum>{contacts.length}</ContactsNum>
         </AmountContacts>
 
